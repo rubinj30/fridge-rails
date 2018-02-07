@@ -1,7 +1,7 @@
-<%= form_for @fridge do |f| %>
-    <div>
+<%= form_for @fridge, url: "/fridges/#{@fridge.id}/edit" do |f| %>
         <%= f.label :brand %>
-            <%= f.text_field :brand %>
+            <%= f.text_field :brand, :placeholder => "#{@fridge.id}" %>
+
     </div>
     <div>
         <%= f.label :location %>
