@@ -28,8 +28,8 @@ class FridgesController < ApplicationController
     end
 
     def edit
-        # @fridge = Fridge.find(parmas[:id])
-        @fridge = Fridge.new
+        @fridge = Fridge.find(params[:id])
+        # @fridge = Fridge.new
     end
 
     private
