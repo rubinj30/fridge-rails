@@ -12,14 +12,20 @@ class FridgesController < ApplicationController
         if @fridge.save
             redirect_to fridges_url
         else
-            reidrect_to fridges_new_url
+            reidrect_to new_fridge_url
         end
 
     end
     
-    # def show
-    #     @fridge = Fridge.find_by(name: 
-    # end
+    def show
+        @fridge = Fridge.find(params[:id]) 
+    end
+
+    def destroy
+        @fridge = Fridge.find(params[:id])
+        @fridge.destroy
+        redirect_to fridges_url
+    end
     
     private
     def fridge_params
