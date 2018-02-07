@@ -10,7 +10,7 @@ class FridgesController < ApplicationController
     def create
         @fridge = Fridge.new(fridge_params)
         if @fridge.save
-            redirect_to fridges_url
+            redirect_to "/fridges/#{@fridge.id}"
         else
             reidrect_to new_fridge_url
         end
@@ -29,6 +29,7 @@ class FridgesController < ApplicationController
 
     def edit
         @fridge = Fridge.find(parmas[:id])
+        
     end
 
     private
