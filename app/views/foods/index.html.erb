@@ -1,0 +1,10 @@
+<h3><%= @fridge.location %> Foods</h3>
+
+<% @foods.each do |food| %>
+    <div>
+        <a href="foods/<%= food.id %>/">
+            <%= food.name %> food</a>
+    </div>
+
+    <br>
+    <% end %>

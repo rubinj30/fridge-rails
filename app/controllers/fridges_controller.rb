@@ -26,7 +26,11 @@ class FridgesController < ApplicationController
         @fridge.destroy
         redirect_to fridges_url
     end
-    
+
+    def edit
+        @fridge = Fridge.find(parmas[:id])
+    end
+
     private
     def fridge_params
         params.require(:fridge).permit(:location, :brand, :size)

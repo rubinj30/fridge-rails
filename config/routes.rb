@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   post '/fridges', to: 'fridges#create'
   get '/fridges/:id', to: 'fridges#show'
   get '/fridges/:id/delete', to: 'fridges#destroy'
-  # delete '/fridges/:id', to 'fridges#delete'
+  get '/fridges/:id/edit', to: 'fridges#edit'
+  get '/fridges/:fridge_id/foods', to: 'foods#index'
 end
