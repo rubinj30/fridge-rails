@@ -1,0 +1,15 @@
+<%= form_for @fridge do |f| %>
+    <div>
+        <%= f.label :brand %>
+            <%= f.text_field :brand %>
+    </div>
+    <div>
+        <%= f.label :location %>
+            <%= f.text_field :location %>
+    </div>
+    <div>
+        <%= f.label :size %>
+            <%= f.text_field :size %>
+    </div>
+    <%= f.submit "New Fridge" %>
+<% end %>
