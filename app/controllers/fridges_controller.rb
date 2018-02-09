@@ -24,12 +24,19 @@ class FridgesController < ApplicationController
     def destroy
         @fridge = Fridge.find(params[:id])
         @fridge.destroy
-        redirect_to fridges_url
+        redirect_to "/fridge/#{@food.fridge_id}/foods"
     end
 
     def edit
         @fridge = Fridge.find(params[:id])
         # @fridge = Fridge.new
+    end
+
+    def update
+        @fridge = Fridge.find(params[:id])
+        @fridge.update!(fridge_params)
+    
+        redirect_to "/fridges/#{@fridge.id}"
     end
 
     private

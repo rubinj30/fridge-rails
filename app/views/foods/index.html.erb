@@ -3,9 +3,20 @@
 
 <% @foods.each do |food| %>
     <div>
-        <a href="foods/<%= food.id %>/">
-            <%= food.name %> food</a>
+        <div>
+            <a href="foods/<%= food.id %>/">
+                <%= food.name %></a>
+        </div>
+        <div>
+            <a href='/fridges/<%= food.fridge_id %>/foods/<%= food.id %>/delete'>Delete Food Item</a>
+        </div>
+
     </div>
 
     <br>
+
     <% end %>
+
+    <div>
+        <a href="/fridges/<%= @fridge.id %>/foods/new">Add Food to Fridge</a>
+    </div>

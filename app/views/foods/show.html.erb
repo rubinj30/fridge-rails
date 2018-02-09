@@ -1,0 +1,19 @@
+
+<h3><%= @food.name %></h3>
+
+<ul>
+    <li><%= @food.weight %> lbs</li>
+    <li><%= @food.vegan %></li>
+
+</ul>
+
+<div>
+    <a href="/fridges/<%= @food.fridge_id %>/foods">Back to All Food</a>
+</div>
+<div>
+    <a href="/fridges/<%= @food.fridge_id %>/">Back to Fridge</a>
+</div>
+
+<div>
+    <a href="/fridges">Back to all fridges</a>
+</div>

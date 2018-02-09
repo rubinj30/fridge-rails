@@ -1,0 +1,15 @@
+<%= form_for @food, url: "/fridges/#{@food.fridge_id}/foods/new" do |f| %>
+    <div>
+        <%= f.label :name %>
+            <%= f.text_field :name %>
+    </div>
+    <div>
+        <%= f.label :weight %>
+            <%= f.text_field :weight %>
+    </div>
+    <div>
+    </div>
+    <%= f.submit "New Food" %>
+<% end %>
+
+<a href="/fridges/<%= @food.fridge_id %>/foods/">Back to All</a>
